@@ -1,0 +1,13 @@
+{
+	"FileVersion": 1,
+	"Version": 1,
+	"VersionName": "0.0.1",
+	"FriendlyName": "XR Privacy Framework",
+	"Description": "Implementing user consent for data collection",
+	"Category": "Data",
+	"CreatedBy": "cognitive3D",
+	"CreatedByURL": "cognitive3d.com",
+	"DocsURL": "docs.cognitive3d.com",
+	"EnabledByDefault": true,
+	"CanContainContent":true
+}
