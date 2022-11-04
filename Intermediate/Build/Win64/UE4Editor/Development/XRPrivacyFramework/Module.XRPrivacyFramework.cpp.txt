@@ -1,6 +1,0 @@
-D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\Definitions.XRPrivacyFramework.h
-D:/Work/Projects/XRPF_UE4/Plugins/xrprivacyframework-unreal/Source/XRPrivacyFramework/Private/XRPrivacyFramework.cpp
-D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Source\XRPrivacyFramework\Public\XRPrivacyFramework.h
-D:/Work/Projects/XRPF_UE4/Plugins/xrprivacyframework-unreal/Source/XRPrivacyFramework/Private/XRPrivacyFrameworkBlueprints.cpp
-D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Source\XRPrivacyFramework\Public\XRPrivacyFrameworkBlueprints.h
-D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Intermediate\Build\Win64\UE4Editor\Inc\XRPrivacyFramework\XRPrivacyFrameworkBlueprints.generated.h
