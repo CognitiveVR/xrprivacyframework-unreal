@@ -1,9 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
-
 #include "XRPrivacyFramework.h"
-
 #define LOCTEXT_NAMESPACE "FXRPrivacyFrameworkModule"
-
 
 void FXRPrivacyFrameworkModule::StartupModule()
 {
@@ -16,36 +13,48 @@ void FXRPrivacyFrameworkModule::ShutdownModule()
 	// we call this function before unloading the module.
 }
 
-bool FXRPrivacyFrameworkModule::IsXRPrivacyFrameworkAgreementComplete()
+/** XR Privacy Framework Null Agreement: Used when initializing */
+#pragma region NullAgreement
+XRPrivacyFrameworkNullAgreement::XRPrivacyFrameworkNullAgreement()
+{
+	privacyAgreementComplete = false;
+	hardwareDataAllowed = false;
+	locationDataAllowed = false;
+	socialDataAllowed = false;
+	biometricDataAllowed = false;
+	spatialDataAllowed = false;
+}
+
+bool XRPrivacyFrameworkNullAgreement::IsXRPrivacyAgreementComplete()
 {
 	return false;
 }
 
-bool FXRPrivacyFrameworkModule::IsHardwareDataAllowed()
+bool XRPrivacyFrameworkNullAgreement::IsHardwareDataAllowed()
 {
 	return false;
 }
 
-bool FXRPrivacyFrameworkModule::IsLocationDataAllowed()
+bool XRPrivacyFrameworkNullAgreement::IsLocationDataAllowed()
 {
 	return false;
 }
 
-bool FXRPrivacyFrameworkModule::IsSocialDataAllowed()
+bool XRPrivacyFrameworkNullAgreement::IsSocialDataAllowed()
 {
 	return false;
 }
 
-bool FXRPrivacyFrameworkModule::IsBiometricDataAllowed()
+bool XRPrivacyFrameworkNullAgreement::IsBiometricDataAllowed()
 {
 	return false;
 }
 
-bool FXRPrivacyFrameworkModule::IsSpatialDataAllowed()
+bool XRPrivacyFrameworkNullAgreement::IsSpatialDataAllowed()
 {
 	return false;
 }
+#pragma endregion NullAgreement
 
 #undef LOCTEXT_NAMESPACE
-	
 IMPLEMENT_MODULE(FXRPrivacyFrameworkModule, XRPrivacyFramework)

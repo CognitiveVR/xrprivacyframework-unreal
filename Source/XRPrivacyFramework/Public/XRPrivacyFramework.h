@@ -8,7 +8,14 @@
 class IXRPrivacyFrameworkAgreementProvider
 {
 public:
-	virtual bool IsXRPrivacyFrameworkAgreementComplete() = 0;
+	bool privacyAgreementComplete;
+	bool hardwareDataAllowed;
+	bool locationDataAllowed;
+	bool socialDataAllowed;
+	bool biometricDataAllowed;
+	bool spatialDataAllowed;
+
+	virtual bool IsXRPrivacyAgreementComplete() = 0;
 	virtual bool IsHardwareDataAllowed() = 0;
 	virtual bool IsLocationDataAllowed() = 0;
 	virtual bool IsSocialDataAllowed() = 0;
@@ -16,7 +23,35 @@ public:
 	virtual bool IsSpatialDataAllowed() = 0;
 };
 
-class FXRPrivacyFrameworkModule : public IModuleInterface, IXRPrivacyFrameworkAgreementProvider
+class XRPrivacyFrameworkAgreement : IXRPrivacyFrameworkAgreementProvider
+{
+public:
+	XRPrivacyFrameworkAgreement(bool agreementComplete, bool hardwareDataAllowed,
+		bool locationDataAllowed, bool socialDataAllowed,
+		bool biometricDataAllowed, bool spatialDataAllowed);
+
+	virtual bool IsXRPrivacyAgreementComplete() override;
+	virtual bool IsHardwareDataAllowed() override;
+	virtual bool IsLocationDataAllowed() override;
+	virtual bool IsSocialDataAllowed() override;
+	virtual bool IsBiometricDataAllowed() override;
+	virtual bool IsSpatialDataAllowed() override;
+};
+
+class XRPrivacyFrameworkNullAgreement : IXRPrivacyFrameworkAgreementProvider
+{
+public:
+	XRPrivacyFrameworkNullAgreement();
+
+	virtual bool IsXRPrivacyAgreementComplete() override;
+	virtual bool IsHardwareDataAllowed() override;
+	virtual bool IsLocationDataAllowed() override;
+	virtual bool IsSocialDataAllowed() override;
+	virtual bool IsBiometricDataAllowed() override;
+	virtual bool IsSpatialDataAllowed() override;
+};
+
+class FXRPrivacyFrameworkModule : public IModuleInterface
 {
 public:
 
@@ -24,11 +59,7 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 
-	/** IXRPrivacyFrameworkAgreementProvider implementation */
-	virtual bool IsXRPrivacyFrameworkAgreementComplete() override;
-	virtual bool IsHardwareDataAllowed() override;
-	virtual bool IsLocationDataAllowed() override;
-	virtual bool IsSocialDataAllowed() override;
-	virtual bool IsBiometricDataAllowed() override;
-	virtual bool IsSpatialDataAllowed() override;
+	IXRPrivacyFrameworkAgreementProvider* agreement;
 };
+
+
