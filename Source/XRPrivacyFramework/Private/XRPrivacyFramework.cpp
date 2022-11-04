@@ -13,6 +13,11 @@ void FXRPrivacyFrameworkModule::ShutdownModule()
 	// we call this function before unloading the module.
 }
 
+FXRPrivacyFrameworkModule::FXRPrivacyFrameworkModule()
+{
+	agreement = new XRPrivacyFrameworkNullAgreement();
+}
+
 /** XR Privacy Framework Null Agreement: Used when initializing */
 #pragma region NullAgreement
 XRPrivacyFrameworkNullAgreement::XRPrivacyFrameworkNullAgreement()
@@ -55,6 +60,53 @@ bool XRPrivacyFrameworkNullAgreement::IsSpatialDataAllowed()
 	return false;
 }
 #pragma endregion NullAgreement
+
+/** Completed Agreement */
+#pragma region Agreement
+XRPrivacyFrameworkAgreement::XRPrivacyFrameworkAgreement(bool agreementComplete, bool hardwareAllowed,
+	bool locationAllowed, bool socialAllowed,
+	bool biometricAllowed, bool spatialAllowed)
+{
+	privacyAgreementComplete = agreementComplete;
+	hardwareDataAllowed = hardwareAllowed;
+	locationDataAllowed = locationAllowed;
+	socialDataAllowed = socialAllowed;
+	biometricDataAllowed = biometricAllowed;
+	spatialDataAllowed = spatialAllowed;
+}
+
+bool XRPrivacyFrameworkAgreement::IsXRPrivacyAgreementComplete()
+{
+	return privacyAgreementComplete;
+}
+
+bool XRPrivacyFrameworkAgreement::IsHardwareDataAllowed()
+{
+	return hardwareDataAllowed;
+}
+
+bool XRPrivacyFrameworkAgreement::IsLocationDataAllowed()
+{
+	return locationDataAllowed;
+}
+
+bool XRPrivacyFrameworkAgreement::IsSocialDataAllowed()
+{
+	return socialDataAllowed;
+}
+
+bool XRPrivacyFrameworkAgreement::IsBiometricDataAllowed()
+{
+	return biometricDataAllowed;
+}
+
+bool XRPrivacyFrameworkAgreement::IsSpatialDataAllowed()
+{
+	return spatialDataAllowed;
+}
+#pragma endregion Agreement
+
+
 
 #undef LOCTEXT_NAMESPACE
 IMPLEMENT_MODULE(FXRPrivacyFrameworkModule, XRPrivacyFramework)

@@ -23,12 +23,12 @@ public:
 	virtual bool IsSpatialDataAllowed() = 0;
 };
 
-class XRPrivacyFrameworkAgreement : IXRPrivacyFrameworkAgreementProvider
+class XRPrivacyFrameworkAgreement : public IXRPrivacyFrameworkAgreementProvider
 {
 public:
-	XRPrivacyFrameworkAgreement(bool agreementComplete, bool hardwareDataAllowed,
-		bool locationDataAllowed, bool socialDataAllowed,
-		bool biometricDataAllowed, bool spatialDataAllowed);
+	XRPrivacyFrameworkAgreement(bool agreementComplete, bool hardwareAllowed,
+		bool locationAllowed, bool socialAllowed,
+		bool biometricAllowed, bool spatialAllowed);
 
 	virtual bool IsXRPrivacyAgreementComplete() override;
 	virtual bool IsHardwareDataAllowed() override;
@@ -38,7 +38,7 @@ public:
 	virtual bool IsSpatialDataAllowed() override;
 };
 
-class XRPrivacyFrameworkNullAgreement : IXRPrivacyFrameworkAgreementProvider
+class XRPrivacyFrameworkNullAgreement : public IXRPrivacyFrameworkAgreementProvider
 {
 public:
 	XRPrivacyFrameworkNullAgreement();
@@ -55,10 +55,10 @@ class FXRPrivacyFrameworkModule : public IModuleInterface
 {
 public:
 
+	FXRPrivacyFrameworkModule();
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
-
 	IXRPrivacyFrameworkAgreementProvider* agreement;
 };
 
