@@ -32,7 +32,7 @@
 /wd4244
 /wd4838
 /I .
-/I D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Source\XRPrivacyFramework\Private
+/I D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Source\XRPrivacyFramework\Private
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime
 /I Runtime\CoreUObject\Public
@@ -232,8 +232,8 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Source
-/I D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Source\XRPrivacyFramework\Public
+/I D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Source
+/I D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Source\XRPrivacyFramework\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -266,9 +266,9 @@
 /FI"D:\Work\Projects\XRPF_UE4\Intermediate\Build\Win64\XRPF_UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Yu"D:\Work\Projects\XRPF_UE4\Intermediate\Build\Win64\XRPF_UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Fp"D:\Work\Projects\XRPF_UE4\Intermediate\Build\Win64\XRPF_UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Source\XRPrivacyFramework\Private\XRPrivacyFramework.cpp"
-/FI"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\Definitions.XRPrivacyFramework.h"
-/Fo"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\XRPrivacyFramework.cpp.obj"
+"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Source\XRPrivacyFramework\Private\XRPrivacyFramework.cpp"
+/FI"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\Definitions.XRPrivacyFramework.h"
+/Fo"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\XRPrivacyFramework.cpp.obj"
 /TP
 /GR-
 /W4

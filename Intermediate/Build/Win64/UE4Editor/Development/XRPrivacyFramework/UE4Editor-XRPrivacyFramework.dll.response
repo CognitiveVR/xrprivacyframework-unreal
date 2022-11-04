@@ -34,8 +34,8 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\Work\Projects\XRPF_UE4\Intermediate\Build\Win64\XRPF_UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\XRPrivacyFramework.cpp.obj"
-"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\Default.rc2.res"
+"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\XRPrivacyFramework.cpp.obj"
+"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\Default.rc2.res"
 "C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
 "C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
 "C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Slate\UE4Editor-Slate.lib"
@@ -65,7 +65,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Binaries\Win64\UE4Editor-XRPrivacyFramework.dll"
-/IMPLIB:"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\UE4Editor-XRPrivacyFramework.suppressed.lib"
-/PDB:"D:\Work\Projects\XRPF_UE4\Plugins\XRPrivacyFramework\Binaries\Win64\UE4Editor-XRPrivacyFramework.pdb"
+/OUT:"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Binaries\Win64\UE4Editor-XRPrivacyFramework.dll"
+/IMPLIB:"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Intermediate\Build\Win64\UE4Editor\Development\XRPrivacyFramework\UE4Editor-XRPrivacyFramework.suppressed.lib"
+/PDB:"D:\Work\Projects\XRPF_UE4\Plugins\xrprivacyframework-unreal\Binaries\Win64\UE4Editor-XRPrivacyFramework.pdb"
 /ignore:4078
