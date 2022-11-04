@@ -1,10 +1,12 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 #include "XRPrivacyFramework.h"
+// #include "XRPrivacyFramework.generated.h"
 #define LOCTEXT_NAMESPACE "FXRPrivacyFrameworkModule"
 
 void FXRPrivacyFrameworkModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	agreement = new AXRPrivacyFrameworkNullAgreement();
 }
 
 void FXRPrivacyFrameworkModule::ShutdownModule()
@@ -15,7 +17,7 @@ void FXRPrivacyFrameworkModule::ShutdownModule()
 
 FXRPrivacyFrameworkModule::FXRPrivacyFrameworkModule()
 {
-	agreement = new XRPrivacyFrameworkNullAgreement();
+
 }
 
 void FXRPrivacyFrameworkModule::SetAgreement(IXRPrivacyFrameworkAgreementProvider* provider)
@@ -25,7 +27,7 @@ void FXRPrivacyFrameworkModule::SetAgreement(IXRPrivacyFrameworkAgreementProvide
 
 /** XR Privacy Framework Null Agreement: Used when initializing */
 #pragma region NullAgreement
-XRPrivacyFrameworkNullAgreement::XRPrivacyFrameworkNullAgreement()
+AXRPrivacyFrameworkNullAgreement::AXRPrivacyFrameworkNullAgreement()
 {
 	privacyAgreementComplete = false;
 	hardwareDataAllowed = false;
@@ -35,32 +37,32 @@ XRPrivacyFrameworkNullAgreement::XRPrivacyFrameworkNullAgreement()
 	spatialDataAllowed = false;
 }
 
-bool XRPrivacyFrameworkNullAgreement::IsXRPrivacyAgreementComplete()
+bool AXRPrivacyFrameworkNullAgreement::IsXRPrivacyAgreementComplete()
 {
 	return false;
 }
 
-bool XRPrivacyFrameworkNullAgreement::IsHardwareDataAllowed()
+bool AXRPrivacyFrameworkNullAgreement::IsHardwareDataAllowed()
 {
 	return false;
 }
 
-bool XRPrivacyFrameworkNullAgreement::IsLocationDataAllowed()
+bool AXRPrivacyFrameworkNullAgreement::IsLocationDataAllowed()
 {
 	return false;
 }
 
-bool XRPrivacyFrameworkNullAgreement::IsSocialDataAllowed()
+bool AXRPrivacyFrameworkNullAgreement::IsSocialDataAllowed()
 {
 	return false;
 }
 
-bool XRPrivacyFrameworkNullAgreement::IsBiometricDataAllowed()
+bool AXRPrivacyFrameworkNullAgreement::IsBiometricDataAllowed()
 {
 	return false;
 }
 
-bool XRPrivacyFrameworkNullAgreement::IsSpatialDataAllowed()
+bool AXRPrivacyFrameworkNullAgreement::IsSpatialDataAllowed()
 {
 	return false;
 }
@@ -110,8 +112,6 @@ bool XRPrivacyFrameworkAgreement::IsSpatialDataAllowed()
 	return spatialDataAllowed;
 }
 #pragma endregion Agreement
-
-
 
 #undef LOCTEXT_NAMESPACE
 IMPLEMENT_MODULE(FXRPrivacyFrameworkModule, XRPrivacyFramework)

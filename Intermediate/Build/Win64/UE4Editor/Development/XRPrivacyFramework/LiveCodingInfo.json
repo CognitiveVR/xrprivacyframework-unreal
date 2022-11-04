@@ -1,5 +1,13 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.XRPrivacyFramework.cpp.obj": [
+			"XRPrivacyFramework.cpp.obj",
+			"XRPrivacyFrameworkBlueprints.cpp.obj"
+		],
+		"Module.XRPrivacyFramework.gen.cpp.obj": [
+			"XRPrivacyFramework.init.gen.cpp.obj",
+			"XRPrivacyFrameworkBlueprints.gen.cpp.obj"
+		]
 	}
 }

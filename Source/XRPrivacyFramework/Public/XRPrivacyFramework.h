@@ -4,9 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
+#include "GameFramework/Actor.h"
 
 class IXRPrivacyFrameworkAgreementProvider
 {
+
 public:
 	bool privacyAgreementComplete;
 	bool hardwareDataAllowed;
@@ -38,10 +40,12 @@ public:
 	virtual bool IsSpatialDataAllowed() override;
 };
 
-class XRPrivacyFrameworkNullAgreement : public IXRPrivacyFrameworkAgreementProvider
+
+class AXRPrivacyFrameworkNullAgreement : public IXRPrivacyFrameworkAgreementProvider
 {
+
 public:
-	XRPrivacyFrameworkNullAgreement();
+	AXRPrivacyFrameworkNullAgreement();
 
 	virtual bool IsXRPrivacyAgreementComplete() override;
 	virtual bool IsHardwareDataAllowed() override;
@@ -50,6 +54,7 @@ public:
 	virtual bool IsBiometricDataAllowed() override;
 	virtual bool IsSpatialDataAllowed() override;
 };
+
 
 class FXRPrivacyFrameworkModule : public IModuleInterface
 {
@@ -63,5 +68,4 @@ public:
 	virtual void ShutdownModule() override;
 	
 	IXRPrivacyFrameworkAgreementProvider* agreement;
-
 };
