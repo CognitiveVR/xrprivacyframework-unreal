@@ -18,6 +18,11 @@ FXRPrivacyFrameworkModule::FXRPrivacyFrameworkModule()
 	agreement = new XRPrivacyFrameworkNullAgreement();
 }
 
+void FXRPrivacyFrameworkModule::SetAgreement(IXRPrivacyFrameworkAgreementProvider* provider)
+{
+	agreement = provider;
+}
+
 /** XR Privacy Framework Null Agreement: Used when initializing */
 #pragma region NullAgreement
 XRPrivacyFrameworkNullAgreement::XRPrivacyFrameworkNullAgreement()
