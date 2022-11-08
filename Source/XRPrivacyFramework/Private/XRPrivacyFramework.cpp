@@ -17,6 +17,11 @@ void FXRPrivacyFrameworkModule::ShutdownModule()
 
 FXRPrivacyFrameworkModule::FXRPrivacyFrameworkModule()
 {
+	StartupModule();
+}
+
+FXRPrivacyFrameworkModule::~FXRPrivacyFrameworkModule()
+{
 
 }
 
