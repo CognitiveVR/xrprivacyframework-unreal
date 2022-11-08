@@ -12,8 +12,6 @@ class XRPRIVACYFRAMEWORK_API UXRPrivacyFrameworkBlueprints : public UBlueprintFu
 {
 	GENERATED_BODY()
 public:
-	UFUNCTION(BlueprintCallable, Category = "XR Privacy Framework")
-		static void CreatePrivacyFramework();
 	UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"), Category = "XR Privacy Framework")
 		static void CreateXRPrivacyFrameworkAgreement(bool agreementComplete, bool hardwareAllowed,
 			bool locationAllowed, bool socialAllowed,
@@ -30,10 +28,6 @@ public:
 		static bool IsSocialDataAllowed();
 	UFUNCTION(BlueprintPure, Category = "XR Privacy Framework")
 		static bool IsBiometricDataAllowed();
-	UFUNCTION(BlueprintPure, Category = "XR Privacy Framework")
-		static bool DoesXRPFExist();
-	UFUNCTION(BlueprintPure, Category = "XR Privacy Framework")
-		static bool DoesAgreementExist();
 	UFUNCTION(BlueprintCallable, Category = "XR Privacy Framework")
 		static void EndAgreement();
 
