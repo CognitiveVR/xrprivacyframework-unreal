@@ -14,8 +14,6 @@ class XRPRIVACYFRAMEWORK_API UXRPrivacyFrameworkBlueprints : public UBlueprintFu
 public:
 	UFUNCTION(BlueprintCallable, Category = "XR Privacy Framework")
 		static void CreatePrivacyFramework();
-	UFUNCTION(BlueprintPure, meta = (WorldContext = "WorldContextObject", CallableWithoutWorldContext, AdvancedDisplay = "2"), Category = "CognitiveVR Analytics|Debug")
-		static bool HasNetworkError();
 	UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"), Category = "XR Privacy Framework")
 		static void CreateXRPrivacyFrameworkAgreement(bool agreementComplete, bool hardwareAllowed,
 			bool locationAllowed, bool socialAllowed,

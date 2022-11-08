@@ -4,14 +4,6 @@
 #include "XRPrivacyFrameworkBlueprints.h"
 //#include "Private/CognitiveVRPrivatePCH.h"
 
-/** Sample ONLY */
-bool UXRPrivacyFrameworkBlueprints::HasNetworkError()
-{
-	FXRPrivacyFrameworkModule& LocalXRPrivacyFramework = FModuleManager::GetModuleChecked<FXRPrivacyFrameworkModule>(TEXT("XRPrivacyFramework"));
-	//LocalXRPrivacyFramework.agreement->
-	return false;
-}
-
 void UXRPrivacyFrameworkBlueprints::CreatePrivacyFramework()
 {
 	FXRPrivacyFrameworkModule();
