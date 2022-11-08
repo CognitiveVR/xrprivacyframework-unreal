@@ -62,6 +62,7 @@ public:
 
 	FXRPrivacyFrameworkModule();
 	~FXRPrivacyFrameworkModule();
+	void End();
 	void SetAgreement(IXRPrivacyFrameworkAgreementProvider* provider);
 
 	/** IModuleInterface implementation */

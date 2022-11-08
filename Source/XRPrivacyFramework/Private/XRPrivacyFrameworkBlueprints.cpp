@@ -75,5 +75,12 @@ bool UXRPrivacyFrameworkBlueprints::IsBiometricDataAllowed()
 	return LocalXRPrivacyFramework.agreement->IsBiometricDataAllowed();
 }
 
+void UXRPrivacyFrameworkBlueprints::EndAgreement()
+{
+	FXRPrivacyFrameworkModule& LocalXRPrivacyFramework = FModuleManager::GetModuleChecked<FXRPrivacyFrameworkModule>(TEXT("XRPrivacyFramework"));
+	LocalXRPrivacyFramework.End();
+}
+
+
 
 

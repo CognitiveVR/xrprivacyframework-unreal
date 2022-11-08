@@ -25,6 +25,11 @@ FXRPrivacyFrameworkModule::~FXRPrivacyFrameworkModule()
 
 }
 
+void FXRPrivacyFrameworkModule::End()
+{
+	agreement = new AXRPrivacyFrameworkNullAgreement();
+}
+
 void FXRPrivacyFrameworkModule::SetAgreement(IXRPrivacyFrameworkAgreementProvider* provider)
 {
 	agreement = provider;

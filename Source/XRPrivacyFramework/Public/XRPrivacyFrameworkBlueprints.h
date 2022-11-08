@@ -36,5 +36,7 @@ public:
 		static bool DoesXRPFExist();
 	UFUNCTION(BlueprintPure, Category = "XR Privacy Framework")
 		static bool DoesAgreementExist();
+	UFUNCTION(BlueprintCallable, Category = "XR Privacy Framework")
+		static void EndAgreement();
 
 };
