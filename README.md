@@ -18,7 +18,7 @@ This package provides a quick way of implementing a user facing popup that allow
 
 ## XRPF Panel Bluperint Details
 
-![Pic2](https://user-images.githubusercontent.com/14244062/204058675-aba1fbf9-e392-4e1b-aca2-f0ebc5f80a78.png)
+![BP](https://user-images.githubusercontent.com/14244062/207676612-cc9ea22a-be44-4f90-9c9a-96729aef2fb9.png)
 
 1. Debug Buttons: Allows you to interact with the UI Panel in editor without a headset
 2. Is [Data Source] Required: This will mark a source of data as required and user will not be able to opt out
